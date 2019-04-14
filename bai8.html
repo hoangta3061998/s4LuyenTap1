@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Hay thu doan xem !</h1>
+<input type="button" value="Choi" onclick="gameGuess()">
+<script>
+    function gameGuess() {
+        var from = parseInt(prompt("So ban muon doan nam vao khoang tu : "));
+        var to = parseInt((prompt("Den : ")));
+        var botChoose = Math.floor(Math.random()*(to - from + 1) + from);
+        var count = 1;
+        while (count <= 3) {
+            let userGuess = parseInt(prompt("So ban doan la :"));
+            if (userGuess === botChoose) {
+                alert("Congulation ! ");
+                break;
+            } else if (userGuess > botChoose) {
+                alert("So ban chon lon hon!");
+                count++;
+            } else if (userGuess < botChoose) {
+                alert("So ban chon be hon !");
+                count++;
+            }
+        }
+    }
+</script>
+</body>
+</html>

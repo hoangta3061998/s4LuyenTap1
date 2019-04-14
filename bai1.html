@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="count()">
+<p id="result" style="font-size: 300px"></p>
+<script>
+    var x = 0 ;
+   function count() {
+       for (let i = 0 ; i < 100 ; i++) {
+           setTimeout(viet , 200 * i);
+       }
+   }
+function viet() {
+    document.getElementById('result').innerHTML = x++;
+    if (x == 99) {
+        alert("Done!");
+    }
+}
+</script>
+</body>
+</html>

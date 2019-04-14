@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function fibo2(num) {
+        var a = 1 ;
+        var b = 0 ;
+        var temp;
+        while (num >= 0) {
+            temp = a;
+            a = a+ b;
+            b = temp;
+            num--;
+            if (b % 5 === 0) {
+                break;
+            }
+        }
+        return b;
+    }
+    alert("So dau tien trong day fibo chia het cho 5 la : " + fibo2(100));
+</script>
+</body>
+</html>
